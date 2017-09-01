@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "SendMessage";
+    Layout = "/Areas/Admin/Views/Shared/_Layout_Body.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.0.js"></script>
+
+<h2>
+    发送消息
+</h2>
+<div>
+    <label>我的消息：</label>
+    <span style=" color:red; font-size:30px;" id="count"></span>条
+</div>
+<p>
+    <div>
+        标题：
+        <input type="text" id="title" />
+    </div>
+    <br /><br />
+    <div>
+        内容：
+        <textarea id="message" rows="4" cols="30"></textarea>
+    </div>
+    <br /><br />
+    <div>
+        <input type="button" id="sendmessage" value="发送" />
+    </div>
+</p>
+
+<script type="text/javascript">
+    $(function () {
+        debugger;
+        var con = $.hubConnection();
+
+        var hub = con.createHubProxy("rateHub");
+
+        hub.on('rateUpdate', function (count) {
+            $('#vote').val("Good (" + count + ")");
+        });
+
+        con.start().done(function () {
+            $('#vote').click(function () {
+                hub.invoke("Rate");
+            });
+        });
+    });
+</script>
+

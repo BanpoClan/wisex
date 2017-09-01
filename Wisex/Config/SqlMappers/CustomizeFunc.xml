@@ -1,0 +1,10 @@
+﻿<sqlMap namespace="NgAccount" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    
+  </alias>
+  <statements>
+    <select id="CommonDataQuery"   resultClass="HashTable" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+  </statements>
+</sqlMap>

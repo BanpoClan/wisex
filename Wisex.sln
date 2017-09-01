@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex", "Wisex\Wisex.csproj", "{EBCED191-96D5-4CD7-8605-310446071201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Core", "Wisex.Core\Wisex.Core.csproj", "{39F474C2-B6A2-4A61-91EF-53EFE2FC707F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Service", "Wisex.Service\Wisex.Service.csproj", "{1D79E7FA-0311-4AA6-805C-B7728DB624A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Entity", "Wisex.Entity\Wisex.Entity.csproj", "{071DAB11-7B49-4ADF-8921-B9709EA9CE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Dao", "Wisex.Data\Wisex.Dao.csproj", "{2AD5A361-564A-434E-8B0C-F247DDDBDF1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Common", "Wisex.Common\Wisex.Common.csproj", "{D07ECE7C-D657-4702-B9F6-715AAC684915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisexWinClient", "WisexWinClient\WisexWinClient.csproj", "{43E3587D-9529-42FE-A01E-E50064ED3350}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBCED191-96D5-4CD7-8605-310446071201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCED191-96D5-4CD7-8605-310446071201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCED191-96D5-4CD7-8605-310446071201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCED191-96D5-4CD7-8605-310446071201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F474C2-B6A2-4A61-91EF-53EFE2FC707F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F474C2-B6A2-4A61-91EF-53EFE2FC707F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F474C2-B6A2-4A61-91EF-53EFE2FC707F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F474C2-B6A2-4A61-91EF-53EFE2FC707F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D79E7FA-0311-4AA6-805C-B7728DB624A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D79E7FA-0311-4AA6-805C-B7728DB624A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D79E7FA-0311-4AA6-805C-B7728DB624A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D79E7FA-0311-4AA6-805C-B7728DB624A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071DAB11-7B49-4ADF-8921-B9709EA9CE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071DAB11-7B49-4ADF-8921-B9709EA9CE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071DAB11-7B49-4ADF-8921-B9709EA9CE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071DAB11-7B49-4ADF-8921-B9709EA9CE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD5A361-564A-434E-8B0C-F247DDDBDF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD5A361-564A-434E-8B0C-F247DDDBDF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD5A361-564A-434E-8B0C-F247DDDBDF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD5A361-564A-434E-8B0C-F247DDDBDF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07ECE7C-D657-4702-B9F6-715AAC684915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07ECE7C-D657-4702-B9F6-715AAC684915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07ECE7C-D657-4702-B9F6-715AAC684915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07ECE7C-D657-4702-B9F6-715AAC684915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E3587D-9529-42FE-A01E-E50064ED3350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E3587D-9529-42FE-A01E-E50064ED3350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E3587D-9529-42FE-A01E-E50064ED3350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E3587D-9529-42FE-A01E-E50064ED3350}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

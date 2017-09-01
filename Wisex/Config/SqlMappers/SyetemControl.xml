@@ -1,0 +1,105 @@
+﻿<sqlMap namespace="NgAccount" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="Menu" type="Wisex.Entity.Models.Menu,Wisex.Entity"/>
+    <typeAlias alias="Role" type="Wisex.Entity.Models.Role,Wisex.Entity"/>
+    <typeAlias alias="RoleMenu" type="Wisex.Entity.Models.RoleMenu,Wisex.Entity"/>
+    <typeAlias alias="SystemObjectSummary" type="Wisex.Entity.Models.SystemObjectSummary,Wisex.Entity"/>
+    <typeAlias alias="SystemObjectFields" type="Wisex.Entity.Models.SystemObjectFields,Wisex.Entity"/>
+    
+  </alias>
+  <statements>
+
+    <insert id="AddMenu"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </insert>
+    <update id="UpdateMenu"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </update>
+    <delete id="DeleteMenu" parameterclass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </delete>
+    
+    <select id="QueryMenu"   resultClass="Menu" parameterClass="HashTable">
+      <![CDATA[
+      $sql$
+     ]]>
+    </select>
+
+    <select id="GetOneMenu"   resultClass="Menu" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+
+
+    <select id="QueryMenuPaging"   resultClass="Menu" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+
+    <select id="QueryMenuCount"   resultClass="int" parameterClass="HashTable">
+      SELECT    COUNT(1) AS TotalCount
+      FROM      dbo.Menu  WHERE name LIKE '%#Keywords#%'
+
+    </select>
+
+    <select id="GetMenus"   resultClass="Menu" parameterClass="HashTable">
+      SELECT  a.*
+      FROM    menu a ,
+      RoleMenu b
+      WHERE   a.Id = b.MenuId
+      AND b.RoleId = ( SELECT RoleId
+      FROM   dbo.UserRole
+      WHERE  UserId =#UserId#) AND a.IsDeleted='false'  
+    </select>
+
+    <select id="QuerySystemObjectFields"   resultClass="SystemObjectFields" parameterClass="HashTable">
+      <![CDATA[
+      SELECT b.* FROM dbo.SystemObjectSummary a,dbo.SystemObjectFields b
+      WHERE a.ID=b.SummaryID AND a.ObjectName='$ObjectName$'
+       ]]>
+    </select>
+
+    <insert id="AddRoles"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </insert>
+    <update id="UpdateRoles"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </update>
+    <delete id="DeleteRoles" parameterclass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </delete>
+     <select id="GetOneRoles"   resultClass="Role" parameterClass="HashTable">
+       <![CDATA[ $sql$ ]]>
+    </select>
+
+
+    <select id="QueryRolesPaging"   resultClass="Role" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+    <select id="QueryRolesCount"   resultClass="int" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+
+    <select id="QueryRoleMenu"   resultClass="RoleMenu" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+
+
+    <select id="QuerySystemObjectSummaryPaging"   resultClass="SystemObjectSummary" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+
+
+    <insert id="AddSystemObjectSummary"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </insert>
+    <select id="GetOneSystemObjectSummary"   resultClass="SystemObjectSummary" parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </select>
+    <update id="UpdateSystemObjectSummary"   parameterClass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </update>
+    <delete id="DeleteSystemObjectSummary" parameterclass="HashTable">
+      <![CDATA[ $sql$ ]]>
+    </delete>
+    
+  </statements>
+</sqlMap>

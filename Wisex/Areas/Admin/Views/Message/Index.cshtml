@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "/Areas/Admin/Views/Shared/_Layout_Body.cshtml";
+}
+
+<h2>Index</h2>
+<input type="button" value="调用消息" id="btnGetMsg" />
+<script>
+    $(function () {
+        $("#btnGetMsg").off().on("click", function () {
+
+            $.ajax({
+                type: "GET",
+                url: "/Admin/Message/GetList",
+                data: { username: "2222222", content: "test11111111111" },
+                dataType: "json",
+                success: function (result) {
+                    debugger;
+                    $("#xxx").text(result.title);
+                    $(this).addClass("done");
+                }
+            });
+
+        });
+
+    });
+</script>

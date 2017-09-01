@@ -1,0 +1,25 @@
+﻿<sqlMap namespace="NgAccount" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="PageView" type="Wisex.Entity.Models.PageView,Wisex.Entity"/>
+  </alias>
+  <statements>
+
+    <insert id="CreatePageView"   parameterClass="PageView">
+      INSERT INTO [dbo].[PageView]
+      ([UserId]
+      ,[LoginName]
+      ,[Url]
+      ,[IP]
+      ,[CreateDateTime]
+      ,[IsDeleted])
+      VALUES
+      (#UserId#
+      ,#LoginName#
+      ,#Url#
+      ,#IP#
+      ,GETDATE()
+      ,'false')
+    </insert>
+   
+  </statements>
+</sqlMap>

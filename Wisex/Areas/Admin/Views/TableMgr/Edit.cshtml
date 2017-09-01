@@ -1,0 +1,85 @@
+﻿@using System.Text
+@using Wisex.Entity.Models
+@model SystemObjectSummary
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout_Body.cshtml";
+}
+@section StylesBefore{
+    @Styles.Render("~/Template/backend/Css/SelectStyle")
+}
+
+@section Scripts{
+    @Scripts.Render("~/JS/backend/Select")
+    <script>
+        $("#submitForm").validate({
+            submitHandler: wisex.buttonLoading,
+            rules: {
+                Name: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 20
+                },
+                Url: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300
+                }
+            },
+            messages: {
+                Name: {
+                    required: "请输入菜单名称",
+                    minlength: "最小长度为2个字符",
+                    maxlength: "最大长度为20个字符"
+                },
+                Url: {
+                    required: "请输入UEL地址，没有地址，请用#代替",
+                    minlength: "最小长度为1个字符",
+                    maxlength: "最大长度300个字符"
+                }
+            }
+        });
+    </script>
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <section class="panel">
+            <header class="panel-heading">
+                修改数据表
+            </header>
+            <div class="panel-body">
+                <div class="form">
+                    <form class="cmxform form-horizontal tasi-form" id="submitForm" method="POST" action="@Request.Url.PathAndQuery" novalidate="novalidate">
+                        @Html.HiddenFor(item => item.Id, new { @class = "form-control" })
+
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.ObjectName, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(item => item.ObjectName, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            @Html.LabelFor(item => item.Summary, new { @class = "control-label col-lg-2" })
+                            <div class="col-lg-10">
+                                @Html.TextAreaFor(item => item.Summary, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-success" type="submit">保存</button>
+                                <button class="btn btn-default" type="button" onclick="wisex.goback(this)">返回</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
