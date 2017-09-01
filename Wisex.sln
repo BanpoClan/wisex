@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex", "Wisex\Wisex.csproj", "{EBCED191-96D5-4CD7-8605-310446071201}"
 EndProject
@@ -16,6 +16,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wisex.Common", "Wisex.Common\Wisex.Common.csproj", "{D07ECE7C-D657-4702-B9F6-715AAC684915}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisexWinClient", "WisexWinClient\WisexWinClient.csproj", "{43E3587D-9529-42FE-A01E-E50064ED3350}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ESEntities", "ESEntities", "{F1F5E946-32E4-4A68-9CB9-D880B1C90453}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QiGuanBaoCustomer", "QiGuanBaoCustomer", "{D59F9105-5CA3-4CF3-A744-100AEF36E201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QiGuanBaoCustomerEntities", "QiGuanBaoCustomerEntities\QiGuanBaoCustomerEntities.csproj", "{71E9B337-13A3-410D-BC42-AD49A30F5833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,11 +57,20 @@ Global
 		{43E3587D-9529-42FE-A01E-E50064ED3350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E3587D-9529-42FE-A01E-E50064ED3350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E3587D-9529-42FE-A01E-E50064ED3350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71E9B337-13A3-410D-BC42-AD49A30F5833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E9B337-13A3-410D-BC42-AD49A30F5833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71E9B337-13A3-410D-BC42-AD49A30F5833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E9B337-13A3-410D-BC42-AD49A30F5833}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D59F9105-5CA3-4CF3-A744-100AEF36E201} = {F1F5E946-32E4-4A68-9CB9-D880B1C90453}
+		{71E9B337-13A3-410D-BC42-AD49A30F5833} = {D59F9105-5CA3-4CF3-A744-100AEF36E201}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {7A407F38-B28A-41AF-9632-CBB738E22C67}
 	EndGlobalSection
 EndGlobal

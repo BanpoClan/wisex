@@ -62,7 +62,7 @@ namespace Wisex.Core.Email
                 smtp.Send(message);
                 isSended = true;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
             }
             return isSended;

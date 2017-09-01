@@ -138,7 +138,7 @@ namespace Wisex.Core
             {
                 sc.Send(message); //发送邮件
             }
-            catch(Exception ex)
+            catch(Exception )
             {
                 return false;
             }
