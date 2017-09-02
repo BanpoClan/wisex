@@ -37,7 +37,8 @@ wisex.grid.prototype.load = function () {
             type: "GET", //后台指定了方式，默认get，外加datatable默认构造的参数很长，有可能超过get的最大长度。
             url: _this.url,
             //dataSrc: "rows", //默认data，也可以写其他的，格式化table的时候取里面的数据
-            data: function(d) { //d 是原始的发送给服务器的数据，默认很长。
+            data: function (d) { //d 是原始的发送给服务器的数据，默认很长。
+                debugger;
                 var param = {}; //因为服务端排序，可以新建一个参数对象
                 //取得排序的字段
                 if (d.columns && d.order && d.order.length > 0) {

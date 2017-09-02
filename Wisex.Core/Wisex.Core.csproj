@@ -94,6 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Elastic\ESRequest.cs" />
     <Compile Include="Elastic\ESSetting.cs" />
     <Compile Include="Email\FTMail.cs" />
     <Compile Include="Email\SMTPMailer.cs" />

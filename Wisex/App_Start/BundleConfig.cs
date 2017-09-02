@@ -113,6 +113,10 @@ namespace Wisex
                 "~/Template/backend/js/bootstrap-fileinput-master/js/fileinput.js",
                 "~/Template/backend/js/file-input-init.js"));
 
+            //charts js
+            bundles.Add(new ScriptBundle("~/JS/backend/echarts").Include(
+                "~/Scripts/echarts/*.js"));
+
             //editor js
             bundles.Add(new ScriptBundle("~/JS/backend/Editor").Include(
                 "~/Template/backend/js/bootstrap-wysihtml5/wysihtml5-0.3.0.js",

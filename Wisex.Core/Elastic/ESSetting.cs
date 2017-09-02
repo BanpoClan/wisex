@@ -11,6 +11,8 @@ namespace Wisex.Core.Elastic
     {
         public static string ESConStr =  System.Configuration.ConfigurationManager.AppSettings["ESServer"];
         public static string DefaultIndex = System.Configuration.ConfigurationManager.AppSettings["DefaultIndex"];
+
+        public static ElasticClient ESClient = new ElasticClient(ConnectionSettings);
         public static Uri Node
         {
             get

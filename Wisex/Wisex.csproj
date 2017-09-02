@@ -203,6 +203,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminBaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\ControlController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Elastic\ElasticSearchController.cs" />
     <Compile Include="Areas\Admin\Controllers\TableMgrController.cs" />
     <Compile Include="Areas\Admin\Controllers\DemoController.cs" />
     <Compile Include="Areas\Admin\Controllers\EmailController.cs" />
@@ -319,14 +320,17 @@
     <Content Include="Areas\Admin\Views\TableMgr\Add.cshtml" />
     <Content Include="Areas\Admin\Views\TableMgr\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Customize\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ElasticSearch\Index.cshtml" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\echarts\echarts.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.tmpl.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
