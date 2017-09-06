@@ -7,7 +7,7 @@
 <script src="~/Scripts/require.js"></script>
 
 @section Scripts{
-@Scripts.Render("~/JS/backend/echarts")
+    @Scripts.Render("~/JS/backend/echarts")
     <script>
 
         var grid = null;
@@ -29,15 +29,31 @@
                         var hits = jsonData.hits.hits;
                         var names = [];
                         var score = [];
+
+                        var tmplData = [];
+
                         var len = hits.length;
                         for (var i = 0; i < len; i++) {
                             var item = hits[i];
                             var baseInfo = item._source.baseInfo;
                             names.push(item._source.baseInfo.name);
                             score.push(item._score);
+
+                            var tmplDataItem = {};
+                            tmplDataItem["name"] = item._source.baseInfo.name;
+                            tmplDataItem["industry"] = item._source.baseInfo.industry;
+                            tmplDataItem["background"] = item._source.baseInfo.background;
+                            tmplDataItem["detail"] = [];
+                            for (var j = 0; j < item._source.detailInfo.length; j++) {
+                                var tmpItem = item._source.detailInfo[j];
+                                tmplDataItem["detail"].push(tmpItem);
+                            }
+
+                            tmplData.push(tmplDataItem);
                         }
                         renderChart(names, score);
 
+                        $("#data_item").tmpl(tmplData).appendTo("#detail");
                     }
             });
 
@@ -88,8 +104,33 @@
                 </form>
             </div>
         </div>
+        <div id="detail"></div>
         <section class="panel">
             <div id="main" style="width: 600px;height:400px;"></div>
         </section>
     </div>
 </div>
+<script id="data_item" type="text/x-jquery-tmpl">
+    <div>
+        ${name}
+    </div>
+    <div>
+        ${industry}
+    </div>
+    <div>
+        ${background}
+    </div>
+    <div>
+        {{each(i,de) detail}}
+        <div>${i+1}:{{= de.name}}</div>
+        {{if i==0}}
+        <h4>group</h4>
+        {{each(j,group) groups}}
+        <div>${group.name}</div>
+        {{/each}}
+        {{/if}}
+        {{/each}}
+
+
+    </div>
+</script>

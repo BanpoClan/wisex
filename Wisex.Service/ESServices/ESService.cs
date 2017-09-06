@@ -24,7 +24,7 @@ namespace Wisex.Service.ESServices
                     }
                 }
             }
-            ";
+            ";                   
 
             return es.ExecuteQeury(json_query);
         }
