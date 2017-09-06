@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CommonModel\QueryBase.cs" />
     <Compile Include="CommonModel\ResultModel.cs" />
+    <Compile Include="Models\Articles.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\EmailPool.cs" />
     <Compile Include="Models\EmailReceiver.cs" />

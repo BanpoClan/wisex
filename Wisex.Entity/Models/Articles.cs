@@ -7,27 +7,23 @@ using Wisex.Common.Attributes;
 
 namespace Wisex.Entity.Models
 {
-   
-    public class LoginLog : BaseModel
+    [TableMappingAttribute(tableName: "Articles")]
+    public class Articles : BaseModel
     {
         /// <summary>
         /// 用户ID
         /// </summary>
-        public int UserId { get; set; }
+        public int ID { get; set; }
 
         /// <summary>
-        /// 登录账号
+        /// 标题
         /// </summary>
-        public string LoginName { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// 登录IP地址
+        /// 内容
         /// </summary>
-        public string IP { get; set; }
+        public string Contents { get; set; }
 
-        /// <summary>
-        /// 电脑的MAC地址
-        /// </summary>
-        public string Mac { get; set; }
     }
 }

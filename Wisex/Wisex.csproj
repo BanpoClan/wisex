@@ -203,6 +203,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminBaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\ControlController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomizeFunc\ArticleController.cs" />
     <Compile Include="Areas\Admin\Controllers\Elastic\ElasticSearchController.cs" />
     <Compile Include="Areas\Admin\Controllers\TableMgrController.cs" />
     <Compile Include="Areas\Admin\Controllers\DemoController.cs" />
@@ -321,6 +322,7 @@
     <Content Include="Areas\Admin\Views\TableMgr\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Customize\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ElasticSearch\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Article\Index.cshtml" />
     <None Include="job_scheduling_data_2_0.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -330,7 +332,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.signalR-2.2.0.js" />
-    <Content Include="Scripts\jquery.tmpl.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -835,7 +836,9 @@
     <Content Include="Template\front\web\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Template\front\web\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Template\front\web\images\404.xcf" />
-    <Content Include="SqlMap.config" />
+    <Content Include="SqlMap.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Msg\SendMessage.cshtml" />
     <Content Include="Views\Msg\ReceiveMessage.cshtml" />
     <Content Include="Views\Home\Chat.cshtml" />
